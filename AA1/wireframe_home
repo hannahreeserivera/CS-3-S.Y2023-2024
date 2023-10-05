@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<link rel="stylesheet" href="style.css">
+			<title> excerpts from the moon </title>
+		</head>
+		<body>
+				<table id="navigation">
+					<tr>
+						<th id="nav1"><img src="charjump.png" style="width:100px; height:100px;"></th>
+						<th><img src="author.png" style="width:100px; height:100px;"></th>
+						<th id="nav2"><img src="storyjump.png" style="width:100px; height:100px;"></th>
+					</tr>
+				</table>
+			<p id="title"> excerpts from the moon </p>
+			<img id="bubble"; src="bubble.png">
+			<p id="introduction"> Here to briefly talk about the characters. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+				<table id="characters">
+					<tr>
+						<th><a href="Sample_HRivera.html"><img src="character.png" style="width:100px; height:100px;"></th>
+						<th><a href="Sample_HRivera.html"><img src="character.png" style="width:100px; height:100px;"></th>
+						<th><a href="Sample_HRivera.html"><img src="character.png" style="width:100px; height:100px;"></th>
+					</tr>
+				</table>
+			<img id="banner" src="banner.png">
+			<p id="synopsis"> so yeah short description stuff here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam, mi facilisis fringilla ultricies, est urna volutpat sapien, non consectetur purus magna ac quam. 
+			In suscipit ligula tortor, sed ornare augue luctus vitae. Donec mollis tortor eu sapien mollis, laoreet semper nisi ultricies. 
+			Pellentesque lobortis, elit eget auctor condimentum, risus turpis pellentesque justo, at egestas arcu tortor in eros. </p>
+			<p id="footer"> copyright <p>
+		</body>
+	</html>
