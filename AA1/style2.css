@@ -1,0 +1,17 @@
+
+.row {
+	display: flex;
+	align-items: center;
+}
+
+.column {
+	flex: 50%;
+}
+
+.left {
+	padding-left: 100px;
+}
+
+.right {
+	padding-left: 400px;
+}
