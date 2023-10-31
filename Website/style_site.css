@@ -41,14 +41,6 @@
 	padding-right: 40px;
 	}
 	
-.warning {
-	position: absolute;
-	color: white;
-	display: inline-block;
-	top: 50%;
-	left: 48%;
-	}
-
 * {
 		background-color: black;
     font-family: didot, serif;
