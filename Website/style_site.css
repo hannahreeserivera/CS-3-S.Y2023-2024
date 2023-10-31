@@ -28,7 +28,7 @@
 
 #main_stry {
 	display: block;
-	margin-left: 200px;
+	margin-left: 315px;
 	margin-right: auto;
 	padding-top: 500px;
 }
@@ -38,10 +38,16 @@
 	width: 50%;
 }
 	
-#chartext, #synopsis {
+#chartext {
 	margin: auto;
 	text-align: center;
 	padding: 50px 0px;
+}
+
+#synopsis {
+	margin: auto;
+	text-align: center;
+	padding: 50px 100px 100px;
 }
 
 #left, #mid{
