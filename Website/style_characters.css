@@ -1,0 +1,27 @@
+.row {
+	display: flex;
+	align-items: center;
+	}
+	
+.column {
+	flex: 50%;
+	}
+	
+#left {
+	padding-left: 40px;
+	}
+	
+#right {
+	padding-left: 200px;
+	}
+	
+#intro {
+	font-style: italic;
+	opacity: 0.7;
+}
+	
+	* {
+		background-color:  black;
+		color: white;
+		font-family: Arial;
+	}
