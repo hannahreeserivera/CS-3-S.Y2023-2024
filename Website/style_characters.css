@@ -21,8 +21,8 @@ h1 {
 	font-style: italic;
 	text-decoration-line: underline;
 	text-decoration-style: double;
-	text-underline-offset: 4px;
-	text-decoration-thickness: 1px;
+	text-underline-offset: 10px;
+	text-decoration-thickness: 2px;
 }
 
 #intro {
