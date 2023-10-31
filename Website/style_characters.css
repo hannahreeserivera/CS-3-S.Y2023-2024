@@ -14,7 +14,11 @@
 #right {
 	padding-left: 200px;
 	}
-	
+
+h1 {
+	font-family: Calisto, serif;
+}
+
 #intro {
 	font-style: italic;
 	opacity: 0.7;
