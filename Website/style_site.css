@@ -20,12 +20,16 @@
 	padding-top: 30px;
 }
 
-.main {
+#main {
 	padding-left: 315px;
 	padding-top: 500px;
 	padding-bottom: 500px;
 }
-	
+
+#main_stry {
+	padding-top: 500px;
+}
+
 #characters {
 	margin: auto;
 	width: 50%;
