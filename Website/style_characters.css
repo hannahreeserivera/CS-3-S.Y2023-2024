@@ -10,10 +10,12 @@
 #left {
 	padding-left: 40px;
 	}
-	
-#right {
-	padding-left: 200px;
-	}
+
+#body {
+	display: block;
+	margin-left: 100px;
+	width: 50%;
+      }
 
 h1 {
 	font-family: Calisto, serif;
