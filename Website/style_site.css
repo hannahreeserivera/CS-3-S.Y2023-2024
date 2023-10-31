@@ -31,9 +31,8 @@
 	width: 50%;
 	}
 	
-#chartext {
+#chartext, #synopsis {
 	text-align: center;
-	color: white;
 	padding: 0px 50px;
 	}
 
@@ -42,6 +41,7 @@
 	}
 	
 * {
-		background-color: black;
-    font-family: didot, serif;
+	background-color: black;
+    	font-family: didot, serif;
+	color: white;
 	}
