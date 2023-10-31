@@ -31,7 +31,13 @@
 	width: 50%;
 }
 	
-#chartext, #synopsis {
+#chartext {
+	margin: auto;
+	text-align: center;
+	padding: 0px 50px;
+}
+
+#synopsis {
 	margin: auto;
 	text-align: center;
 	padding-top: 50px;
