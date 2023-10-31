@@ -20,6 +20,7 @@ h1 {
 	font-size: 60px;
 	text-decoration-line: underline;
 	text-decoration-style: double;
+	text-decoration-thickness: 1px;
 }
 
 #intro {
