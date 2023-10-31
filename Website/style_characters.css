@@ -19,6 +19,7 @@ h1 {
 	font-family: Calisto, serif;
 	font-size: 60px;
 	text-decoration: double;
+	text-decoration-style: solid;
 	text-decoration-thickness: 1px;
 }
 
