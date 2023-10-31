@@ -31,13 +31,9 @@
 	width: 50%;
 }
 	
-#chartext {
+#chartext, #synopsis {
 	margin: auto;
 	text-align: center;
-	padding: 50px 0px;
-}
-
-#synopsis {
 	padding: 50px 0px;
 }
 
