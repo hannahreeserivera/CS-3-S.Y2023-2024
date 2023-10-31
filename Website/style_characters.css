@@ -18,6 +18,7 @@
 h1 {
 	font-family: Calisto, serif;
 	font-size: 60px;
+	font-style: italic;
 	text-decoration-line: underline;
 	text-decoration-style: double;
 	text-decoration-offset: 4px;
