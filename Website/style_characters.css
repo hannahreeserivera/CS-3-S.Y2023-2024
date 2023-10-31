@@ -23,6 +23,7 @@ h1 {
 }
 
 #intro {
+	font-family: Calisto, serif;
 	font-style: italic;
 	opacity: 0.7;
 }
@@ -30,5 +31,5 @@ h1 {
 	* {
 		background-color:  black;
 		color: white;
-		font-family: Arial;
+		font-family: Helvetica;
 	}
