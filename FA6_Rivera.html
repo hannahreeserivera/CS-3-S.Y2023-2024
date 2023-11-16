@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title> FA6 </title>
+		</head>
+		<style>
+			* {
+				font-size: 30px;
+				}
+				
+			#div1, #div2 {
+				border: 1px solid black;
+				padding: 10px;
+				width: 10%;
+				text-align: center;
+				}
+				
+			#link1, #link2 {
+				margin: 0px 10px;
+				text-decoration: none;
+				} 
+
+			#link1:link {
+				color: #ffc55a;
+				background-color: #a8c6df;
+				}
+
+			#link2:link {
+				color: white;
+				background-color: #2369af;
+				}
+				
+			#link2:visited {
+				color: #ffbfd7;
+				background-color: #d5d5d5;
+				}
+				
+			#link1:visited {
+				color: #956074;
+				background-color: #ffe6e6;
+				}
+				
+			#link1:hover {
+				color: #eeff12;
+				background-color: #879bab;
+				}
+				
+			#link2:hover {
+				color: #ffcfdc;
+				background-color: #083059;
+				}
+				
+			#link1:active {
+				color: #954a4a;
+				background-color: #4196d9;
+				}
+			
+			#link2:active {
+				color: #6eeda2;
+				background-color: #007eff;
+				}
+			
+			#div1:target {
+				background-color: #99ffeb;
+				color: #1a8b1a;
+				}
+				
+			#div2:target {
+				border: 10px dotted #33cc33;
+				background-color: #993366;
+				color: #ffccff;
+				}
+		</style>
+		<body>
+			<a id="link1" href="#div1"> Link 1 </a>
+			<a id="link2" href="#div2"> Link 2 </a>
+			<br><br>
+			<div id="div1"> div 1 </div>
+			<br>
+			<div id="div2"> div 2 </div>
+		</body>
+	</html>
