@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 6
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: rgb(215, 240, 177);
+                color: rgb(110, 111, 112);
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> Quadratic Formula </h1>
+
+        <button onclick="solve()">Find the root</button>
+
+        <h4 id="result"></h4>
+
+        <script>
+            function solve(){
+				var a = prompt("input your value for a: ");
+				var b = prompt("input your value for b: ");
+				var c = prompt("input your value for c: ");
+			
+				//d = discriminant
+				let d = b * b - 4 * a * c;
+
+				if (d > 0){
+					var root_one = (-b + Math.sqrt(d)) / (2 * a);
+					var root_two = (-b - Math.sqrt(d)) / (2 * a);
+					document.getElementById("result").innerHTML = "roots are " + root_one + " & " + root_two;
+					}
+				
+				else if (d == 0){
+					root_one = root_two = -b / (2 * a);
+					document.getElementById("result").innerHTML = "roots are equally " + root_one;
+					}
+					
+				else {
+					root_one = (-b / (2 * a)).toFixed(2);
+					root_two = (Math.sqrt(-d) / (2 * a)).toFixed(2);
+					document.getElementById("result").innerHTML = "roots are " + root_one + " + " + root_two + "i & " 
+					+ root_one + " - " + root_two;
+				}
+            }
+        </script>
+    </body>
+</html>
