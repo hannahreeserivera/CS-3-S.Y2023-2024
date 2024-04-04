@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<style>
+			* {
+				text-align: center;
+				}
+			p {
+				text-align: left;
+				}
+			</style>
+		</head>
+		<body>
+		<P id="num"></p>
+		<p id="multi"></p>
+			<script>		
+				var number = prompt('Enter a number within the range of 2-10: ');
+				while(number < 2 || number > 10){
+					alert("wrong input");
+					var number = prompt('Enter a number within the range of 2-10: ');
+					}
+					
+				var range = prompt('Enter a your multiplier, that within the range of 2-10: ');
+				while(range < 2 || range > 10){
+					alert("wrong input");
+					var range = prompt('Enter a your multiplier, that within the range of 2-10: ');
+					}
+					
+				document.getElementById("num").innerHTML="Enter a number: " + number + "<br>";
+				document.getElementById("multi").innerHTML="Enter its multiplier: " + range + "<br>";
+				
+				document.write("<table>");
+				
+				for(var i = 1; i <= number; i++) {
+					document.write("<tr style='height:20px;'>");
+					
+					for(var j = 1; j <= range; j++) {
+						document.write("<td style='width:20px;background-color:" + "'>" + i*j + "</td>");
+					}
+					document.write("</tr>");
+				}
+			</script>
+		</body>
+	</html>
