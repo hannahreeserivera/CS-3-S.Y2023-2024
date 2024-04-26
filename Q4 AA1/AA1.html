@@ -5,70 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Supplies Inventory System</title>
   <style>
-    body {
-      font-family: "Courier New";
-      text-align: center;
-	    background-image: url("background.png");
-    }
+	  body {
+		  font-family: "Courier New";
+		  text-align: center;
+		  background-image: url("background.png");
+	  }
 	
-	h2 {
-      font-family: "Consolas";
-		}
+	  h2 {
+		  font-family: "Consolas";
+	  }
 		
-    #inventoryTableContainer {
-      position: relative;
-      right: 300px;
-      display: none;
-      width: 40%;
-    }
+	  #inventoryTableContainer {
+		  position: relative;
+		  right: 300px;
+		  display: none;
+		  width: 40%;
+	  }
 	
-	#char {
+	  #char {
 		float: right;
 		margin-right: 100px;
-		}
+	  }
 		
-	#character {
+	  #character {
 		width: 350px;
 		animation: character 15s ease 0s infinite normal forwards;
-		}
+	  }
 		
-	@keyframes character {
-	  0%,
-	  100% {
-		  transform: rotate(0deg);
-		  transform-origin: 50% 100%;
-	  }
+	  @keyframes character {
+	 	 0%,
+	  	100% {
+		  	transform: rotate(0deg);
+		 	 transform-origin: 50% 100%;
+		  }
 
-	  10% {
-		  transform: rotate(2deg);
-	  }
+	  	10% {
+			  transform: rotate(2deg);
+	 	 }
 
-	  20%,
-	  40%,
-	  60% {
-		  transform: rotate(-4deg);
-	  }
+	  	20%,
+	 	40%,
+	  	60% {
+			  transform: rotate(-4deg);
+	 	 }
 
-    30%,
-	  50%,
-	  70% {
-		  transform: rotate(4deg);
-	  }
+    		30%,
+		50%,
+	  	70% {
+			transform: rotate(4deg);
+	 	 }
 
-	  80% {
-		  transform: rotate(-2deg);
-  	}
+	  	80% {
+			transform: rotate(-2deg);
+  		}
 
-	  90% {
-		  transform: rotate(2deg);
+	 	 90% {
+		  	transform: rotate(2deg);
+	  	}
 	  }
-  }
 	
 	#inventoryTable {
-    background-image: url("inventory.png");
+		background-image: url("inventory.png");
 		background-size: cover;
 		margin-right: 5px;
-	  margin-left: 410px;
+		margin-left: 410px;
 	  }
 		
 	#Forms {
@@ -85,38 +85,43 @@
 		padding-top: 10px;
 		margin-left: 140px;
 	  }
+
+	  #intro {
+		background-color: white;
+		width: 900px;
+		margin-left: 220px;
+		}
+	  
+	  table {
+		width: 100%;
+		border-collapse: collapse;
+	  }
+    
+	  th, td {
+		border: 1px solid #ddd;
+		padding: 8px;
+		text-align: left;
+	  }
+    
+	  th {
+		background-color: #f2f2f2;
+	  }
+    
+	  form {
+		margin-top: 20px;
+	  }
+    
+	  form input[type="text"], form input[type="number"], form input[type="submit"] {
+		  margin: 5px;
+		  padding: 8px;
+	  }
 	
-		
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    }
-    
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    }
-    
-  th {
-    background-color: #f2f2f2;
-    }
-    
-  form {
-    margin-top: 20px;
-    }
-    
-  form input[type="text"], form input[type="number"], form input[type="submit"] {
-    margin: 5px;
-    padding: 8px;
-    }
-	
-  #inventoryButton {
-	  position: relative;
-	  right: 320px;
-    cursor: pointer;
-	  width: 15%;
-    }
+	  #inventoryButton {
+	 	position: relative;
+	 	right: 320px;
+    		cursor: pointer;
+		width: 15%;
+	  }
 }
   </style>
 </head>
@@ -128,6 +133,24 @@
 	<span style="color: #7578AD">Inventory </span>
 	<span style="color: #B57E6B">System </span>
 </h2>
+
+<div id="intro">
+<p>
+This simple inventory system is made by our group, consisting of<span style="font-weight: 900; color: #7578AD"> Ramos, Rivera and Sagario</span> :D
+</p>
+<p>
+ You basically just have to type something in the <span style="font-style: italic; color: gray"> "Item Name" </span> box (like "flour", "egg", etc.), add the quantity and you're done!
+</p>
+<p>
+Once you're done doing so, it'll appear in the inventory table. Just click the "Inventory" box to see it!
+</p>
+<p>
+If you want to change an item's quantity, you can do so with the "Change Quanitity" box.
+</p>
+<p>
+Lastly, if you want to remove an item, just use the "Remove Item" feature!
+</p>
+</div>
 
 <img src="button.png" type="button" alt="Inventory" id="inventoryButton">
 
