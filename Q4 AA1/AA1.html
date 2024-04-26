@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Supplies Inventory System</title>
+  <style>
+    body {
+      font-family: "Courier New";
+      text-align: center;
+	    background-image: url("background.png");
+    }
+	
+	h2 {
+      font-family: "Consolas";
+		}
+		
+    #inventoryTableContainer {
+      position: relative;
+      right: 300px;
+      display: none;
+      width: 40%;
+    }
+	
+	#char {
+		float: right;
+		margin-right: 100px;
+		}
+		
+	#character {
+		width: 350px;
+		animation: character 15s ease 0s infinite normal forwards;
+		}
+		
+	@keyframes character {
+	  0%,
+	  100% {
+		  transform: rotate(0deg);
+		  transform-origin: 50% 100%;
+	  }
+
+	  10% {
+		  transform: rotate(2deg);
+	  }
+
+	  20%,
+	  40%,
+	  60% {
+		  transform: rotate(-4deg);
+	  }
+
+    30%,
+	  50%,
+	  70% {
+		  transform: rotate(4deg);
+	  }
+
+	  80% {
+		  transform: rotate(-2deg);
+  	}
+
+	  90% {
+		  transform: rotate(2deg);
+	  }
+  }
+	
+	#inventoryTable {
+    background-image: url("inventory.png");
+		background-size: cover;
+		margin-right: 5px;
+	  margin-left: 410px;
+	  }
+		
+	#Forms {
+		position: relative;
+		top: 300px;
+		margin: 100px 43s0px;
+		height: 350px;
+		width: 600px;
+		background-image: url("woah.png");
+		background-repeat: no-repeat;
+		}
+		
+	#addItemForm, #changeItemForm {
+		padding-top: 10px;
+		margin-left: 140px;
+	  }
+	
+		
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+    
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    }
+    
+  th {
+    background-color: #f2f2f2;
+    }
+    
+  form {
+    margin-top: 20px;
+    }
+    
+  form input[type="text"], form input[type="number"], form input[type="submit"] {
+    margin: 5px;
+    padding: 8px;
+    }
+	
+  #inventoryButton {
+	  position: relative;
+	  right: 320px;
+    cursor: pointer;
+	  width: 15%;
+    }
+}
+  </style>
+</head>
+<body>
+
+<h2>
+	<span style="color: #B47BB8">Simple </span>
+	<span style="color: #8CD67E">Supplies </span>
+	<span style="color: #7578AD">Inventory </span>
+	<span style="color: #B57E6B">System </span>
+</h2>
+
+<img src="button.png" type="button" alt="Inventory" id="inventoryButton">
+
+<div>
+<div id="char">
+	<img src="character.png" id="character">
+</div>
+<div id="inventoryTableContainer">
+  <table id="inventoryTable">
+    <tr>
+      <th>Item Name</th>
+      <th>No. of Items</th>
+    </tr>
+  </table>
+</div>
+</div>
+</div>
+
+
+<div id="Forms">
+<form id="addItemForm">
+  <input type="text" id="itemName" placeholder="Item Name">
+  <input type="number" id="itemQuantity" placeholder="Quantity">
+  <input type="submit" value="Add Item">
+</form>
+
+<form id="changeItemForm">
+  <input type="text" id="changeItemName" placeholder="Item Name">
+  <input type="number" id="changeItemQuantity" placeholder="Change Quantity">
+  <input type="submit" value="Change Quantity">
+</form>
+
+<form id="removeItemForm">
+  <input type="text" id="removeItemName" placeholder="Item Name">
+  <input type="submit" value="Remove Item">
+</form>
+</div>
+
+<script>
+  var supply = [];
+
+  function addItem(name, num) {
+    var existingItem = supply.find(item => item.itemName === name);
+    if (existingItem) {
+      existingItem.noOfItem += num;
+    } else {
+      supply.push({ itemName: name, noOfItem: num });
+    }
+    displayItems();
+  }
+
+  function addNoOfItem(name, num) {
+    var item = supply.find(item => item.itemName === name);
+    if (item) {
+      item.noOfItem += num;
+      if (item.noOfItem < 0) item.noOfItem = 0;
+      displayItems();
+    }
+  }
+
+  function subNoOfItem(name, num) {
+    addNoOfItem(name, -num);
+  }
+
+  function removeItem(name) {
+    supply = supply.filter(item => item.itemName !== name);
+    displayItems();
+  }
+
+  function displayItems() {
+    var table = document.getElementById("inventoryTable");
+    table.innerHTML = "<tr><th>Item Name</th><th>No. of Items</th></tr>";
+    supply.forEach(item => {
+      var row = table.insertRow();
+      row.insertCell(0).textContent = item.itemName;
+      row.insertCell(1).textContent = item.noOfItem;
+    });
+  }
+
+  document.getElementById("addItemForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var itemName = document.getElementById("itemName").value.trim();
+    var itemQuantity = parseInt(document.getElementById("itemQuantity").value);
+    if (itemName && !isNaN(itemQuantity)) {
+      addItem(itemName, itemQuantity);
+      document.getElementById("itemName").value = "";
+      document.getElementById("itemQuantity").value = "";
+    }
+  });
+
+  document.getElementById("changeItemForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var itemName = document.getElementById("changeItemName").value.trim();
+    var itemQuantity = parseInt(document.getElementById("changeItemQuantity").value);
+    if (itemName && !isNaN(itemQuantity)) {
+      addNoOfItem(itemName, itemQuantity);
+      document.getElementById("changeItemName").value = "";
+      document.getElementById("changeItemQuantity").value = "";
+    }
+  });
+
+  document.getElementById("removeItemForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var itemName = document.getElementById("removeItemName").value.trim();
+    if (itemName) {
+      removeItem(itemName);
+      document.getElementById("removeItemName").value = "";
+    }
+  });
+
+  document.getElementById("inventoryButton").addEventListener("click", function() {
+    var inventoryTableContainer = document.getElementById("inventoryTableContainer");
+    if (inventoryTableContainer.style.display === "none") {
+      inventoryTableContainer.style.display = "block";
+    } else {
+      inventoryTableContainer.style.display = "none";
+    }
+  });
+
+  // Initial display
+  displayItems();
+</script>
+
+</body>
+</html>
