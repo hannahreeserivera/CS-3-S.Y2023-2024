@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<script>
+    function showInput() {
+        document.getElementById('display').innerHTML = 
+                    "First Name: " + document.getElementById("firstName").value + "</br>" +
+					"Surname: " + document.getElementById("surname").value + "</br>" + 
+					"Username: " + document.getElementById("username").value + "</br>" + 
+					"Gender: " + document.getElementById("gender").value + "</br>" + 
+					"Password: " + document.getElementById("pWord").value + "</br>" + 
+					"Email: " + document.getElementById("eMail").value + "</br>" + 
+					"Address: " + document.getElementById("address").value + "</br>" + 
+					"Interests: " + document.getElementById("interests").value + "</br>";
+    }
+	
+	function clearResult() {
+		document.getElementById("result").value.reset();
+	}
+		
+	function focusBlurA() {
+					var a = document.getElementById("firstName");
+					if (a.value != ""){
+						a.style.border = "5px solid rgb(133, 224, 133)";
+						}
+					else{
+					a.style.border = "5px solid rgb(255, 77, 77)";
+					}
+				}
+				
+	function focusBlurB() {
+					var b = document.getElementById("surname");
+					if (b.value != ""){
+						b.style.border = "5px solid rgb(133, 224, 133)";
+						}
+					else{
+					b.style.border = "5px solid rgb(255, 77, 77)";
+					}
+				}
+				
+	function focusBlurC() {
+					var c = document.getElementById("username");
+					if (c.value != ""){
+						c.style.border = "5px solid rgb(133, 224, 133)";
+						}
+					else{
+					c.style.border = "5px solid rgb(255, 77, 77)";
+					}
+				}
+				
+	function focusBlurD() {
+					var d = document.getElementById("gender");
+					if (d.value != ""){
+						d.style.border = "5px solid rgb(133, 224, 133)";
+						}
+					else{
+					d.style.border = "5px solid rgb(255, 77, 77)";
+					}
+				}
+				
+	function focusBlurE() {
+					var e = document.getElementById("pWord");
+					if (e.value != ""){
+						e.style.border = "5px solid rgb(133, 224, 133)";
+						}
+					else{
+					e.style.border = "5px solid rgb(255, 77, 77)";
+					}
+				}
+				
+	function focusBlurF() {
+					var f = document.getElementById("eMail");
+					if (f.value != ""){
+						f.style.border = "5px solid rgb(133, 224, 133)";
+						}
+					else{
+					f.style.border = "5px solid rgb(255, 77, 77)";
+					}
+				}
+				
+	function focusBlurG() {
+					var g = document.getElementById("address");
+					if (g.value != ""){
+						g.style.border = "5px solid rgb(133, 224, 133)";
+						}
+					else{
+					g.style.border = "5px solid rgb(255, 77, 77)";
+					}
+				}
+				
+	function focusBlurH() {
+					var h = document.getElementById("interests");
+					if (h.value != ""){
+						h.style.border = "5px solid rgb(133, 224, 133)";
+						}
+					else{
+					h.style.border = "5px solid rgb(255, 77, 77)";
+					}
+				}
+  </script>
+
+<style>
+	body {
+		background-image: url("background.png");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		color: white;
+		}
+	
+	#mainField {
+		padding-top: 30px;
+		padding-bottom: 20px;
+		}
+	
+</style>
+  </head>
+<body>
+
+  <form id= "mainField">
+	<fieldset form = "main">
+	<legend> Sign-up </legend>
+    <label for="firstName"> First Name: </label><br/>
+				<input type="text" id="firstName" onfocus="focusBlurA()" onblur="focusBlurA()"><br/>
+				<label for="surname"> Surname: </label><br/>
+				<input type="text" id="surname" onfocus="focusBlurB()" onblur="focusBlurB()"><br/>
+				<label for="username"> Username: </label><br/>
+				<input type="text" id="username" onfocus="focusBlurC()" onblur="focusBlurC()"><br/>
+				<label for="gen"> Gender: </label></br>
+				<select id="gender" onfocus="focusBlurD()" onblur="focusBlurD()">
+					<option value="female"> Female </option>
+					<option value="male"> Male </option>
+					<option value="prefer"> Prefer not to mention </option>
+				</select></br>
+				<label for="password"> Password: </label>
+				<input type="password" id="pWord" onfocus="focusBlurE()" onblur="focusBlurE()"></br>
+				<label for="email"> Email: </label>
+				<input type="email" id="eMail" onfocus="focusBlurF()" onblur="focusBlurF()"></br>
+				<label for="address"> Address: </label><br/>
+				<input type="text" id="address" onfocus="focusBlurG()" onblur="focusBlurG()"><br/>
+				<label for="interests"> Interests: </label></br>
+				<textarea id="interests" rows="4" cols="20" onfocus="focusBlurH()" onblur="focusBlurH()"> </textarea>
+			</fieldset>
+  </form>
+	<input type = "submit" id= "submit" onclick="showInput();"></bt>
+	<fieldset form = "results">
+	<legend>Your input: </legend>
+		<p><span id='display'></span></p>
+	</fieldset>
+	<input type = "reset" value = "Reset" onclick="clearResult()">
+</body>
+</html>
