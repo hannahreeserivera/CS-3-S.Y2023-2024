@@ -96,6 +96,16 @@
 					h.style.border = "5px solid rgb(255, 77, 77)";
 					}
 				}
+
+	function clearResult() {
+		document.getElementById("firstName").value = "";
+		document.getElementById("surname").value = "";
+		document.getElementById("username").value = "";
+		document.getElementById("pWord").value = "";
+		document.getElementById("eMail").value = "";
+		document.getElementById("address").value = "";
+		document.getElementById("interests").value = "";
+	}
   </script>
 
 <style>
@@ -111,7 +121,10 @@
 		padding-top: 30px;
 		padding-bottom: 20px;
 		}
-	
+
+	#resultsField {
+		margin: 20px;
+		}
 </style>
   </head>
 <body>
@@ -142,7 +155,7 @@
 			</fieldset>
   </form>
 	<input type = "submit" id= "submit" onclick="showInput();"></bt>
-	<fieldset form = "results">
+	<fieldset form = "results" id="resultsField">
 	<legend>Your input: </legend>
 		<p><span id='display'></span></p>
 	</fieldset>
